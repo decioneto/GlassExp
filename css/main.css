@@ -1,0 +1,15 @@
+:root {
+    --light-grey: #d8d8d8;
+    --mig-grey: #4b4b4d;
+    --dark-grey: #323233;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Arial",sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
