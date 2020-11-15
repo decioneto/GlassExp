@@ -1,0 +1,32 @@
+@import url("main.css");
+
+.bg-light-grey {
+    background-color: var(--light-grey) !important;
+}
+
+.bg-mid-grey {
+    background-color: var(--mid-grey)!important;
+}
+
+.bg-dark-grey {
+    background-color: var(--dark-grey)!important;
+}
+
+.text-light-grey {
+    color: var(--light-grey)!important;
+}
+
+.btn-lang {
+    padding: 3px 10px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn-profile {
+    border: 0;
+    background-color: #fff;
+}
+
+button:focus {
+    outline: 0;
+}

@@ -1,6 +1,6 @@
 :root {
     --light-grey: #d8d8d8;
-    --mig-grey: #4b4b4d;
+    --mid-grey: #4b4b4d;
     --dark-grey: #323233;
 }
 
@@ -12,4 +12,32 @@ body {
     font-family: "Arial",sans-serif;
     font-size: 16px;
     font-weight: normal;
+}
+
+.navbar .navbar-brand img {
+    width: 100%;
+    max-width: 130px;    
+}
+
+.dropdown-toggle::after {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart .cart-item-number {
+    background-color: #bd2130;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
 }
