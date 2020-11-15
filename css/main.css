@@ -21,7 +21,7 @@ body {
 
 .dropdown-toggle::after {
     color: #fff;
-    margin-bottom: 5px;
+    vertical-align: 0.155em;
 }
 
 .cart {
@@ -40,4 +40,70 @@ body {
     color: #fff;
     border-radius: 50%;
     font-size: 10px;
+}
+
+.close-filter {
+    height: 100%;
+    background-color: #151515;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.close-filter::before {
+    content: "";
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    transition: all 0.3s cubic-bezier(0.63, -0.69, 0.15, 1.31);
+}
+
+.close-filter::after {
+    content: "";
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    transition: all 0.3s cubic-bezier(0.63, -0.69, 0.15, 1.31);
+}
+
+.close-filter:hover::before {
+    transform: rotate(0deg);
+}
+
+.close-filter:hover::after {
+    transform: rotate(0deg);
+}
+
+.search-icon {
+    position: absolute;
+    top: 15px;
+}
+
+.search-icon img {
+    width: 20px;
+}
+
+.input-search {
+    border: 0;
+    margin-top: 10px;
+    outline: 0;
+    width: 100%;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
 }
