@@ -124,13 +124,18 @@ a.clean-filter:hover {
     color: #747475;
 }
 
-.filter-section .section-header{
+.section-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em 0;
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+    outline: none;
 }
 
-.filter-section .section-header .section-title {
+.section-header .section-title {
     font-size: 0.8rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -138,13 +143,52 @@ a.clean-filter:hover {
     margin-bottom: 0;
 }
 
-.filter-section .section-title + img {
+.section-title + img {
     width: 20px;
 }
 
-.filter-section .section-drop > select {
+.section-drop{
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+}
+
+.section-drop select {
     width: 100%;
     padding: 8px;
     outline: 0;
     border: 1px solid #ddd;
+}
+
+.icon-plus {
+    position: relative;
+    height: 12px;
+    width: 12px;
+}
+
+.icon-plus::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--dark-grey);
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-plus::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--dark-grey);
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: all 0.2s cubic-bezier(0.62, -0.2, 0.83, 0.99);
+}
+
+.section-header.active .icon-plus::after {
+    transform: translateY(-50%) rotate(0deg);
 }
