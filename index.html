@@ -45,11 +45,11 @@
         </nav>
 
         <div class="row no-gutters ">
-            <div class="col-md-3 col-lg-2">
+            <div class="col-md-3 col-lg-2 filter-col" onclick="closeFilter()">
                 <a class="py-3 px-4 d-block bg-dark-grey text-white" href="#">
                     <div class="filter">Filtros <img class="icons ml-2" src="img/icons/options-outline.svg" alt="icon filter"></div>
                 </a>
-                <div class="close-filter"></div>
+                <div id="close-filter"></div>
             </div>
 
             <div class="col-md-9 col-lg-10 border-top border-bottom py-2 px-3">
@@ -62,8 +62,8 @@
             </div>
         </div>
 
-        <div class="row no-gutters">
-            <div class="col-md-3 col-lg-2 px-4" id="aside-popper">
+        <div class="row no-gutters" style="position: relative;">
+            <div class="col-md-3 col-lg-2 px-4 active" id="aside-popper">
                 <div>
                     <a class="text-center d-block py-3 clean-filter" href="#">
                         <img src="img/icons/close-outline.svg" alt="icon close" class="icons icon-close-adjust"> Limpar Filtros
@@ -210,7 +210,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-12 bg-light-grey"></div>
+            <div class="col-md-12 col-lg-12 bg-light-grey" id="main-content"></div>
         </div>
 
         <script src="node_modules/jquery/dist/jquery.min.js"></script>

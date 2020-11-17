@@ -42,7 +42,7 @@ body {
     font-size: 10px;
 }
 
-.close-filter {
+#close-filter {
     height: 100%;
     background-color: #151515;
     width: 60px;
@@ -52,7 +52,7 @@ body {
     cursor: pointer;
 }
 
-.close-filter::before {
+#close-filter::before {
     content: "";
     height: 2px;
     width: 30px;
@@ -65,7 +65,7 @@ body {
     transition: all 0.3s cubic-bezier(0.63, -0.69, 0.15, 1.31);
 }
 
-.close-filter::after {
+#close-filter::after {
     content: "";
     height: 2px;
     width: 30px;
@@ -78,11 +78,11 @@ body {
     transition: all 0.3s cubic-bezier(0.63, -0.69, 0.15, 1.31);
 }
 
-.close-filter:hover::before {
+#close-filter:hover::before {
     transform: rotate(0deg);
 }
 
-.close-filter:hover::after {
+#close-filter:hover::after {
     transform: rotate(0deg);
 }
 
@@ -122,6 +122,28 @@ a.clean-filter {
 
 a.clean-filter:hover {
     color: #747475;
+}
+
+#aside-popper {
+    position: absolute;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    min-height: 800px;
+    z-index: 10;
+    background-color: #fff;
+    transition: left 0.3s ease-in-out;
+}
+
+#aside-popper.active {
+    left: 0!important;
+}
+
+#main-content {
+    padding: 1.5em;
+    width: 100%;
+    max-width: calc(100% - 320px);
+    margin-left: auto;
 }
 
 .section-header{
