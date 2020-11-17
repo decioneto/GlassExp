@@ -192,3 +192,72 @@ a.clean-filter:hover {
 .section-header.active .icon-plus::after {
     transform: translateY(-50%) rotate(0deg);
 }
+
+.filter-list .check-item {
+    position: relative;
+}
+
+.filter-list .check-item .check-input {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.filter-list .check-item .check-label {
+    display: inline-block;
+}
+
+.filter-list .check-item .check-label .check-box {
+    height: 18px;
+    width: 18px;
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: text-bottom;
+}
+
+.filter-list .check-item .check-label .color {
+    position: absolute;
+    top: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: block;
+}
+
+.ambar {
+    background-color: #c97f0e;
+    right: 170px;
+}
+
+.transparente {
+    background-color: #eee;
+    right: 120px;
+}
+
+.verde {
+    background-color: #328537;
+    right: 175px;
+}
+
+.filter-list .check-item .check-label .check-box::after {
+    content: url("../img/icons/checkmark-outline.svg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--light-grey);
+    background-color: transparent;
+    transition: all 0.s;
+}
+
+.filter-list .check-item .check-input:checked + .check-label .check-box::after {
+    background-color: #1783f7;
+}
