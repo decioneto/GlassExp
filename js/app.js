@@ -16,15 +16,14 @@ for (i = 0; i < dropFilter.length; i++) {
 function closeFilter() {
     let asideFilter = document.getElementById("aside-popper")
     let btnCloseFilter = document.getElementById("close-filter")
-    let filterCol = document.getElementsByClassName("filter-col")
-       
+    let filterCol = document.getElementById("filter-col")
+    
     asideFilter.classList.toggle("active");
+    filterCol.classList.toggle("open");
 
     if(asideFilter.classList.contains("active")) {
-        btnCloseFilter.style.display = "block";
-        // filterCol.classList.add("col-lg-2");
+        btnCloseFilter.style.width = "60px";
     } else {
-        btnCloseFilter.style.display = "none";
-        // filterCol.classList.add("col-lg-1");
+        btnCloseFilter.style.width = "0"
     }
 }
