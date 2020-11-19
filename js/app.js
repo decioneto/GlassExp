@@ -13,8 +13,9 @@ for (i = 0; i < dropFilter.length; i++) {
     });
 }
 
+const asideFilter = document.getElementById("aside-popper")
+
 function closeFilter() {
-    let asideFilter = document.getElementById("aside-popper")
     let btnCloseFilter = document.getElementById("close-filter")
     let filterCol = document.getElementById("filter-col")
     
@@ -27,3 +28,7 @@ function closeFilter() {
         btnCloseFilter.style.width = "0"
     }
 }
+
+let mainContent = document.getElementById("main-content")
+
+mainContent.style.width = window.innerWidth - asideFilter.clientWidth + "px";
