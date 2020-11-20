@@ -157,9 +157,15 @@ a.clean-filter:hover {
     left: 0!important;
 }
 
+#aside-popper.active + #main-content {
+    width: calc(100% - 320px) !important;
+}
+
 #main-content {
     padding: 1.5em;
     margin-left: auto;
+    width: 100%;
+    transition: width 0.3s ease-in-out;
 }
 
 .section-header{

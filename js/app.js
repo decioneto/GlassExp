@@ -29,6 +29,3 @@ function closeFilter() {
     }
 }
 
-let mainContent = document.getElementById("main-content")
-
-mainContent.style.width = window.innerWidth - asideFilter.clientWidth + "px";
