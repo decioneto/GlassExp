@@ -305,3 +305,75 @@ a.clean-filter:hover {
 .filter-list .check-item .check-input:checked + .check-label .check-box::after {
     background-color: #1783f7;
 }
+
+.box-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box-produto {
+    background-color: #fff;
+    width: calc(20% - 6px);
+    text-align: center;
+    margin: 3px;
+}
+
+.box-produto .big-info {
+    padding: 4em 0 1em;
+}
+
+.box-produto .big-info .color span{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: block;
+    margin: 1em auto;
+}
+
+.ambar-color {
+    background-color: #c97f0e;
+}
+
+.transparente-color {
+    background-color: #eee;
+}
+
+.verde-color {
+    background-color: #328537;
+}
+
+.box-produto .big-info .capacidade {
+    font-size: 22px;
+    color: var(--dark-grey);
+    margin: 0;
+    font-weight: 600;
+}
+
+.box-produto .big-info .nome {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+
+.box-produto .small-infos {
+    display: flex;
+}
+
+.box-produto .small-infos .row-width {
+    flex-basis: 50%;
+}
+
+.box-produto .small-infos .row-width .info {
+    border-top: 1px solid #ddd;
+}
+
+.box-produto .small-infos .row-width .info p {
+    font-size: 12px;
+    color: #b1b1b1;
+    margin: 3px 0;
+}
+
+.box-produto .small-infos .row-width:first-child {
+    border-right: 1px solid #ddd;
+}
