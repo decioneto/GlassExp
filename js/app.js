@@ -29,3 +29,29 @@ function closeFilter() {
     }
 }
 
+var requestURL = '../produtos.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+    var produtos = request.response;
+    addProdutos(produtos);
+}
+
+// function addProdutos(jsonObj) {
+//     let prodInfos = jsonObj;
+//     let container = document.getElementsByClassName("box-row")
+//     let imgProd = document.getElementsByClassName("img")
+//     let color = document.getElementsByClassName("color-prod")
+//     let capacity = document.getElementsByClassName("capacidade")
+//     let nome = document.getElementsByClassName("nome-prod")
+//     let heightProd = document.getElementsByClassName("height-prod")
+//     let diameterProd = document.getElementsByClassName("diameter-prod")
+//     let weightProd = document.getElementsByClassName("weight-prod")
+
+//     for (var i = 0; i < prodInfos.length; i++) {
+//         container.;
+//     }
+// }

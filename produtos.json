@@ -1,0 +1,102 @@
+[
+    {
+        "img": "BR-2004416-F3-thumb.jpg",
+        "color": "transparent-color",
+        "capacity": "3223 ml",
+        "name": "FOOD Pote 3223",
+        "height" : "245 mm",
+        "diameter": "147 mm",
+        "weight": "1240 g",
+        "nr": "2004416"
+    },
+    {
+        "img": "BR-2202344-F3-thumb.jpg",
+        "capacity": "2370 ml",
+        "color": "transparent-color",
+        "name": "FOOD Pote 2370",
+        "height" : "185 mm",
+        "diameter": "147.5 mm",
+        "weight": "880 g",
+        "nr": "2202344"
+    },
+    {
+        "img": "BR-2202886-G9-thumb.jpg",
+        "color": "verde-color",
+        "capacity": "2007 ml",
+        "name": "WINE Garrafão 2 litros",
+        "height" : "275 mm",
+        "diameter": "131 mm",
+        "weight": "935 g",
+        "nr": "2202886"
+    },
+    {
+        "img": "BR-2201929-F3-thumb.jpg",
+        "color": "transparent-color",
+        "capacity": "1506 ml",
+        "name": "NAB Garrafa Suco Pronto 1500",
+        "height" : "298 mm",
+        "diameter": "102.15 mm",
+        "weight": "750 g",
+        "nr": "2201929"
+    },
+    {
+        "img": "BR-2005736-F3-thumb.jpg",
+        "color": "transparent-color",
+        "capacity": "1006 ml",
+        "name": "NAB Garrafa 1006",
+        "height" : "248.5 mm",
+        "diameter": "90.4 mm",
+        "weight": "455 g",
+        "nr": "2005736"
+    },
+    {
+        "img": "Br-2202371-G9-thumb.jpg",
+        "color": "verde-color",
+        "capacity": "1003 ml",
+        "name": "WINE STD PP30 1003",
+        "height" : "302 mm",
+        "diameter": "85.8 mm",
+        "weight": "550 g",
+        "nr": "2202371"
+    },
+    {
+        "img": "BR-2201199-G9-thumb.jpg",
+        "color": "verde-color",
+        "capacity": "1003 ml",
+        "name": "WINE Garrafa Lumiere 1003 PP30",
+        "height" : "302 mm",
+        "diameter": "85.8 mm",
+        "weight": "550 g",
+        "nr": "2202371"
+    },
+    {
+        "img": "BR-2201866-F3-thumb.jpg",
+        "color": "transparent-color",
+        "capacity": "1003 ml",
+        "name": "NAB Garrafa Suco Liso 1000",
+        "height" : "275.5 mm",
+        "diameter": "87.6 mm",
+        "weight": "515 g",
+        "nr": "2201866"
+    },
+    {
+        "img": "BR-2005761-F3-thumb.jpg",
+        "color": "transparent-color",
+        "capacity": "1003 ml",
+        "name": "SPIRIT Garrafa 1000",
+        "height" : "286.9 mm",
+        "diameter": "90.3 mm",
+        "weight": "478 g",
+        "nr": "2005761"
+    },
+    {
+        "img": "BR-2005056-F3-thumb.jpg",
+        "color": "transparent-color",
+        "capacity": "1003 ml",
+        "name": "SPIRIT Garrafa 1000",
+        "height" : "286.9 mm",
+        "diameter": "90.3 mm",
+        "weight": "478 g",
+        "nr": "2005056"
+    }
+]
