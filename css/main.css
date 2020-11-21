@@ -317,13 +317,19 @@ a.clean-filter:hover {
     width: calc(20% - 6px);
     text-align: center;
     margin: 3px;
+    display: block;
+    transition: all .3s cubic-bezier(.23,1,.32,1);
+}
+
+.box-produto:hover {
+    box-shadow: 0 10px 40px rgba(0,0,0,.1);
 }
 
 .box-produto .big-info {
     padding: 4em 0 1em;
 }
 
-.box-produto .big-info .color span{
+.box-produto .big-info .color-prod {
     height: 18px;
     width: 18px;
     border-radius: 50%;
@@ -350,10 +356,19 @@ a.clean-filter:hover {
     font-weight: 600;
 }
 
-.box-produto .big-info .nome {
+.box-produto:hover .big-info .capacidade {
+    color: #178585;
+}
+
+.box-produto .big-info .nome-prod {
     font-size: 14px;
     font-weight: 600;
     color: var(--dark-grey);
+    transition: all .3s cubic-bezier(.23,1,.32,1);
+}
+
+.box-produto:hover .big-info .nome-prod {
+    color: #178585;
 }
 
 .box-produto .small-infos {
