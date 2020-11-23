@@ -95,29 +95,3 @@ setRightValue();
 
 inputLeft.addEventListener("input", setLeftValue);
 inputRight.addEventListener("input", setRightValue);
-
-inputLeft.addEventListener("mouseover", function() {
-	thumbLeft.classList.add("hover");
-});
-inputLeft.addEventListener("mouseout", function() {
-	thumbLeft.classList.remove("hover");
-});
-inputLeft.addEventListener("mousedown", function() {
-	thumbLeft.classList.add("active");
-});
-inputLeft.addEventListener("mouseup", function() {
-	thumbLeft.classList.remove("active");
-});
-
-inputRight.addEventListener("mouseover", function() {
-	thumbRight.classList.add("hover");
-});
-inputRight.addEventListener("mouseout", function() {
-	thumbRight.classList.remove("hover");
-});
-inputRight.addEventListener("mousedown", function() {
-	thumbRight.classList.add("active");
-});
-inputRight.addEventListener("mouseup", function() {
-	thumbRight.classList.remove("active");
-});

@@ -150,3 +150,70 @@ input[type=range]::-webkit-slider-thumb {
 	background-color: red;
 	-webkit-appearance: none;
 }
+
+.filter-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+    outline: none;
+}
+
+.filter-header .section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--mid-grey);
+    margin-bottom: 0;
+}
+
+#check-slide-input {
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.label-slide {
+    display: inline-block;
+    height: 20px;
+    width: 35px;
+    position: relative;
+}
+
+.slide-box {
+    background-color: lightgrey;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.slide-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    transition: all 0.3s ease-in-out;
+}
+
+#check-slide-input:checked + .slide-box {
+    background-color: #1eb1b0;
+}
+
+#check-slide-input:checked + .slide-box::before {
+    left: 13px;
+}

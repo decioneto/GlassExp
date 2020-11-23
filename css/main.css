@@ -187,6 +187,7 @@ a.clean-filter:hover {
     margin-bottom: 0;
 }
 
+
 .section-title + img {
     width: 20px;
 }
@@ -304,6 +305,25 @@ a.clean-filter:hover {
 
 .filter-list .check-item .check-input:checked + .check-label .check-box::after {
     background-color: #1783f7;
+}
+
+.filter-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    width: 100%;
+    border: 0;
+    background-color: #fff;
+    outline: none;
+}
+
+.filter-header .section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--mid-grey);
+    margin-bottom: 0;
 }
 
 .box-row {
