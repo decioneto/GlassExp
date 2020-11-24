@@ -29,16 +29,16 @@ function closeFilter() {
     }
 }
 
-var requestURL = '../produtos.json';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+// var requestURL = '../produtos.json';
+// var request = new XMLHttpRequest();
+// request.open('GET', requestURL);
+// request.responseType = 'json';
+// request.send();
 
-request.onload = function() {
-    var produtos = request.response;
-    addProdutos(produtos);
-}
+// request.onload = function() {
+//     var produtos = request.response;
+//     addProdutos(produtos);
+// }
 
 // function addProdutos(jsonObj) {
 //     let prodInfos = jsonObj;
@@ -57,41 +57,119 @@ request.onload = function() {
 // }
 
 
-// RANGE SLIDE //
-var inputLeft = document.getElementById("input-left");
-var inputRight = document.getElementById("input-right");
+// RANGE SLIDE CAPACIDADE //
+var inputLeftCap = document.getElementById("input-left-cap");
+var inputRightCap = document.getElementById("input-right-cap");
 
-var thumbLeft = document.querySelector(".slider > .thumb.left");
-var thumbRight = document.querySelector(".slider > .thumb.right");
-var range = document.querySelector(".slider > .range");
+var thumbLeftCap = document.querySelector(".capacidade .slider > .thumb.left");
+var thumbRightCap = document.querySelector(".capacidade .slider > .thumb.right");
+var rangeCap = document.querySelector(".capacidade .slider > .range");
 
-function setLeftValue() {
-	var _this = inputLeft,
+function setLeftValueCap() {
+	var _this = inputLeftCap,
 		min = parseInt(_this.min),
 		max = parseInt(_this.max);
 
-	_this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+	_this.value = Math.min(parseInt(_this.value), parseInt(inputRightCap.value) - 1);
 
 	var percent = ((_this.value - min) / (max - min)) * 100;
 
-	thumbLeft.style.left = percent + "%";
-	range.style.left = percent + "%";
+	thumbLeftCap.style.left = percent + "%";
+	rangeCap.style.left = percent + "%";
 }
-setLeftValue();
+setLeftValueCap();
 
-function setRightValue() {
-	var _this = inputRight,
+function setRightValueCap() {
+	var _this = inputRightCap,
 		min = parseInt(_this.min),
 		max = parseInt(_this.max);
 
-	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeftCap.value) + 1);
 
 	var percent = ((_this.value - min) / (max - min)) * 100;
 
-	thumbRight.style.right = (100 - percent) + "%";
-	range.style.right = (100 - percent) + "%";
+	thumbRightCap.style.right = (100 - percent) + "%";
+	rangeCap.style.right = (100 - percent) + "%";
 }
-setRightValue();
+setRightValueCap();
 
-inputLeft.addEventListener("input", setLeftValue);
-inputRight.addEventListener("input", setRightValue);
+inputLeftCap.addEventListener("input", setLeftValueCap);
+inputRightCap.addEventListener("input", setRightValueCap);
+
+// RANGE SLIDE Altura //
+var inputLeftAlt = document.getElementById("input-left-alt");
+var inputRightAlt = document.getElementById("input-right-alt");
+
+var thumbLeftAlt = document.querySelector(".altura .slider > .thumb.left");
+var thumbRightAlt = document.querySelector(".altura .slider > .thumb.right");
+var rangeAlt = document.querySelector(".altura .slider > .range");
+
+function setLeftValueAlt() {
+	var _this = inputLeftAlt,
+		min = parseInt(_this.min),
+		max = parseInt(_this.max);
+
+	_this.value = Math.min(parseInt(_this.value), parseInt(inputRightAlt.value) - 1);
+
+	var percent = ((_this.value - min) / (max - min)) * 100;
+
+	thumbLeftAlt.style.left = percent + "%";
+	rangeAlt.style.left = percent + "%";
+}
+setLeftValueAlt();
+
+function setRightValueAlt() {
+	var _this = inputRightAlt,
+		min = parseInt(_this.min),
+		max = parseInt(_this.max);
+
+	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeftAlt.value) + 1);
+
+	var percent = ((_this.value - min) / (max - min)) * 100;
+
+	thumbRightAlt.style.right = (100 - percent) + "%";
+	rangeAlt.style.right = (100 - percent) + "%";
+}
+setRightValueAlt();
+
+inputLeftAlt.addEventListener("input", setLeftValueAlt);
+inputRightAlt.addEventListener("input", setRightValueAlt);
+
+// RANGE SLIDE Diametro //
+var inputLeftDia = document.getElementById("input-left-dia");
+var inputRightDia = document.getElementById("input-right-dia");
+
+var thumbLeftDia = document.querySelector(".diametro .slider > .thumb.left");
+var thumbRightDia = document.querySelector(".diametro .slider > .thumb.right");
+var rangeDia = document.querySelector(".diametro .slider > .range");
+
+function setLeftValueDia() {
+	var _this = inputLeftDia,
+		min = parseInt(_this.min),
+		max = parseInt(_this.max);
+
+	_this.value = Math.min(parseInt(_this.value), parseInt(inputRightDia.value) - 1);
+
+	var percent = ((_this.value - min) / (max - min)) * 100;
+
+	thumbLeftDia.style.left = percent + "%";
+	rangeDia.style.left = percent + "%";
+}
+setLeftValueDia();
+
+function setRightValueDia() {
+	var _this = inputRightDia,
+		min = parseInt(_this.min),
+		max = parseInt(_this.max);
+
+	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeftDia.value) + 1);
+
+	var percent = ((_this.value - min) / (max - min)) * 100;
+
+	thumbRightDia.style.right = (100 - percent) + "%";
+	rangeDia.style.right = (100 - percent) + "%";
+}
+setRightValueDia();
+
+inputLeftDia.addEventListener("input", setLeftValueDia);
+inputRightDia.addEventListener("input", setRightValueDia);
