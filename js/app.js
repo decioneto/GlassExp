@@ -76,6 +76,12 @@ function setLeftValueCap() {
 
 	thumbLeftCap.style.left = percent + "%";
 	rangeCap.style.left = percent + "%";
+
+	var minRangeCap = document.getElementById("min-range-cap")
+	var	minRangeCapValue = percent
+
+	minRangeCap.value = parseInt((minRangeCapValue * 3173) / 100 + 50);
+	
 }
 setLeftValueCap();
 
@@ -90,6 +96,12 @@ function setRightValueCap() {
 
 	thumbRightCap.style.right = (100 - percent) + "%";
 	rangeCap.style.right = (100 - percent) + "%";
+
+	
+	var maxRangeCap = document.getElementById("max-range-cap")
+	var	maxRangeCapValue = percent
+
+	maxRangeCap.value = parseInt((maxRangeCapValue * 3173) / 100 + 50);
 }
 setRightValueCap();
 
@@ -115,6 +127,11 @@ function setLeftValueAlt() {
 
 	thumbLeftAlt.style.left = percent + "%";
 	rangeAlt.style.left = percent + "%";
+
+	var minRangeAlt = document.getElementById("min-range-alt")
+	var	minRangeAltValue = percent
+
+	minRangeAlt.value = parseInt((minRangeAltValue * 273) / 100 + 64);
 }
 setLeftValueAlt();
 
@@ -129,6 +146,11 @@ function setRightValueAlt() {
 
 	thumbRightAlt.style.right = (100 - percent) + "%";
 	rangeAlt.style.right = (100 - percent) + "%";
+
+	var maxRangeAlt = document.getElementById("max-range-alt")
+	var	maxRangeAltValue = percent
+
+	maxRangeAlt.value = parseInt((maxRangeAltValue * 273) / 100 + 64);
 }
 setRightValueAlt();
 
@@ -154,6 +176,11 @@ function setLeftValueDia() {
 
 	thumbLeftDia.style.left = percent + "%";
 	rangeDia.style.left = percent + "%";
+
+	var minRangeDia = document.getElementById("min-range-dia")
+	var	minRangeDiaValue = percent
+
+	minRangeDia.value = parseInt((minRangeDiaValue * 109) / 100 + 40);
 }
 setLeftValueDia();
 
@@ -168,6 +195,11 @@ function setRightValueDia() {
 
 	thumbRightDia.style.right = (100 - percent) + "%";
 	rangeDia.style.right = (100 - percent) + "%";
+	
+	var maxRangeDia = document.getElementById("max-range-dia")
+	var	maxRangeDiaValue = percent
+
+	maxRangeDia.value = parseInt((maxRangeDiaValue * 109) / 100 + 40);
 }
 setRightValueDia();
 
