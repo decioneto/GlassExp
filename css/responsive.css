@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1400px) {
+    .box-produto {
+        max-width: calc(25% - 6px);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #aside-popper {
+        box-shadow: 3px 0px 10px rgb(0 0 0 / 0.2);
+    }
+
+    #aside-popper + #main-content {
+        width: 100% !important;
+    }
+
+    #close-filter {
+        width: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .box-produto {
+        max-width: calc(100% - 6px);
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    #filter-col.open {
+        flex: 0 0 100%;
+    }
+}

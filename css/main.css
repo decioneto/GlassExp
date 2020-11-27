@@ -144,7 +144,7 @@ a.clean-filter:hover {
 #aside-popper {
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     height: 100%;
     width: 320px;
     min-height: 800px;
@@ -154,17 +154,17 @@ a.clean-filter:hover {
 }
 
 #aside-popper.active {
-    left: 0!important;
+    left: -100% !important;
 }
 
 #aside-popper.active + #main-content {
-    width: calc(100% - 320px) !important;
+    width: 100% !important;
 }
 
 #main-content {
     padding: 1.5em;
     margin-left: auto;
-    width: 100%;
+    width: calc(100% - 320px) !important;
     transition: width 0.3s ease-in-out;
 }
 
@@ -334,7 +334,8 @@ a.clean-filter:hover {
 
 .box-produto {
     background-color: #fff;
-    width: calc(20% - 6px);
+    width: 100%;
+    max-width: calc(20% - 6px);
     text-align: center;
     margin: 3px;
     display: block;

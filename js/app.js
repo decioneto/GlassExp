@@ -14,20 +14,33 @@ for (i = 0; i < dropFilter.length; i++) {
 }
 
 const asideFilter = document.getElementById("aside-popper")
+const btnCloseFilter = document.getElementById("close-filter")
+const filterCol = document.getElementById("filter-col")
 
 function closeFilter() {
-    let btnCloseFilter = document.getElementById("close-filter")
-    let filterCol = document.getElementById("filter-col")
     
     asideFilter.classList.toggle("active");
     filterCol.classList.toggle("open");
 
     if(asideFilter.classList.contains("active")) {
-        btnCloseFilter.style.width = "60px";
+		btnCloseFilter.style.width = "0";
+		btnCloseFilter.style.zIndex = "-1";
     } else {
-        btnCloseFilter.style.width = "0"
-    }
+		btnCloseFilter.style.width = "60px"
+		btnCloseFilter.style.zIndex = "1";
+	}
 }
+
+var media = window.matchMedia('(max-width: 1100px)');
+
+function mediaScreen(e) {
+	if(e.matches) {
+		filterCol.classList.add("open");
+		asideFilter.classList.toggle("active");
+	}
+}
+
+media.addEventListener('change', mediaScreen)
 
 // var requestURL = '../produtos.json';
 // var request = new XMLHttpRequest();
