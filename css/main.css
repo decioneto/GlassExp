@@ -9,7 +9,7 @@
     padding: 0;
 }
 body {
-    font-family: "Arial",sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Roboto, Arial, sans-serif;
     font-size: 16px;
     font-weight: normal;
 }
@@ -42,18 +42,25 @@ body {
     font-size: 10px;
 }
 
-#filter-col, #major-col {
-    transition: flex 0.2s ease-in-out;
+#filter-col {
+    width: 320px;
+    position: relative;
+    transition: width 0.2s ease-in-out;
 }
 
 #filter-col.open {
-    flex: 0 0 10%;
+    width: 150px;
 }
 
-#filter-col.open + #major-col{
-    transition: flex 0.2s ease-in-out;
-    flex: 0 0 90%;
-    max-width: 90%;
+#major-col{
+    transition: width 0.2s ease-in-out;
+    width: calc(100% - 320px);
+    position: relative;
+    background-color: #f7f7f7;
+}
+
+#filter-col.open  + #major-col{
+    width: calc(100% - 150px) !important;
 }
 
 #close-filter {
@@ -119,6 +126,7 @@ body {
     width: 100%;
     display: inline-block;
     padding-left: 30px;
+    background-color: #f7f7f7;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -338,7 +346,8 @@ a.clean-filter:hover {
     max-width: calc(20% - 6px);
     text-align: center;
     margin: 3px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     transition: all .3s cubic-bezier(.23,1,.32,1);
 }
 
@@ -346,11 +355,15 @@ a.clean-filter:hover {
     box-shadow: 0 10px 40px rgba(0,0,0,.1);
 }
 
-.box-produto .big-info {
+.box-produto a .big-info {
     padding: 4em 0 1em;
 }
 
-.box-produto .big-info .color-prod {
+.box-produto a .big-info .img-prod img {
+    max-height: 155px;
+}
+
+.box-produto a .big-info .color-prod {
     height: 18px;
     width: 18px;
     border-radius: 50%;
@@ -394,6 +407,7 @@ a.clean-filter:hover {
 
 .box-produto .small-infos {
     display: flex;
+    margin-top: auto;
 }
 
 .box-produto .small-infos .row-width {
@@ -408,8 +422,28 @@ a.clean-filter:hover {
     font-size: 12px;
     color: #b1b1b1;
     margin: 3px 0;
+    display: flex;
+    flex-direction: revert;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-produto .small-infos .row-width .info p img {
+    height: 16px;
+    margin-right: 4px;
 }
 
 .box-produto .small-infos .row-width:first-child {
     border-right: 1px solid #ddd;
+}
+
+.box-produto a .add-cart {
+    background-color: var(--mid-grey);
+    padding: 10px 0;
+    color: #f7f7f7;
+    transition: background-color 0.5s ease;
+}
+
+.box-produto a .add-cart:hover {
+    background-color: var(--dark-grey);
 }
