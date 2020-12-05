@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+
+        <title>Glass Experience - Shop</title>
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light px-4">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-gex.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav ml-auto">
+                    <div class="dropdown">
+                        <button class="btn-lang dropdown-toggle bg-mid-grey" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="icons" src="img/icons/globe-outline.svg" alt="icon globe">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Português</a>
+                          <a class="dropdown-item" href="#">English</a>
+                          <a class="dropdown-item" href="#">Italiano</a>
+                        </div>
+                    </div>
+                    <button class="profile mx-3 btn-profile"><img class="icons" src="img/icons/person-outline.svg" alt="icon user"></button>
+                    <div class="cart">
+                        <img class="icons" src="img/icons/cart-outline.svg" alt="icon cart"><span class="cart-item-number">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row no-gutters ">
+            <div class="" id="filter-col" onclick="closeFilter()">
+                <a class="py-3 px-2 d-block bg-dark-grey text-white header-filter" href="#">
+                    <div class="filter">Filtros <img class="icons ml-2" src="img/icons/options-outline.svg" alt="icon filter"></div>
+                </a>
+                <div id="close-filter"></div>
+            </div>
+
+            <div class="border-top border-bottom py-2 px-3" id="major-col">
+                <form action="" method="POST">
+                    <div class="border-bottom">
+                        <span class="search-icon"><img src="img/icons/search-outline.svg" alt="icon search" class="icons"></span>
+                        <input type="search" class="input-search" placeholder="Pesquisar produtos">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex" style="position: relative;">
+            <div id="aside-popper" class="px-4" >
+                <div>
+                    <a class="text-center d-block py-3 clean-filter" href="#">
+                        <img src="img/icons/close-outline.svg" alt="icon close" class="icons icon-close-adjust"> Limpar Filtros
+                    </a>
+                </div>
+                <button class="section-header border-top">
+                    <h3 class="section-title">Tipo</h3>
+                    <div class="icon-plus"></div>
+                </button>
+                <div class="section-drop">
+                    <div class="pb-3">
+                        <select name="" id="">
+                            <option value="1">Todos</option>
+                            <option value="2">Garrafa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="section-header border-top">
+                    <h3 class="section-title">Categoria</h3>
+                    <div class="icon-plus"></div>
+                </button>
+                <div class="section-drop">
+                    <div class="pb-3">
+                        <div>
+                            <ul class="filter-list">
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="cerveja" id="cerveja">
+                                    <label class="check-label" for="cerveja">
+                                        <span class="check-box"></span>
+                                        Cerveja
+                                    </label>
+                                </li>
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="destilados" id="destilados">
+                                    <label class="check-label" for="destilados">
+                                        <span class="check-box"></span>
+                                        Destilados
+                                    </label>
+                                </li>
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="vinhos" id="vinhos">
+                                    <label class="check-label" for="vinhos">
+                                        <span class="check-box"></span>
+                                        Vinhos
+                                    </label>
+                                </li>
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="comida" id="comida">
+                                    <label class="check-label" for="comida">
+                                        <span class="check-box"></span>
+                                        Comida
+                                    </label>
+                                </li>
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="nab" id="nab">
+                                    <label class="check-label" for="nab">
+                                        <span class="check-box"></span>
+                                        NAB
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="section-header border-top">
+                    <h3 class="section-title">Cores</h3>
+                    <div class="icon-plus"></div>
+                </button>
+                <div class="section-drop">
+                    <div class="pb-3">
+                        <div>
+                            <ul class="filter-list">
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="todos" id="todos">
+                                    <label class="check-label" for="todos">
+                                        <span class="check-box"></span>
+                                        Todos
+                                    </label>
+                                </li>
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="todos" id="todos">
+                                    <label class="check-label" for="todos">
+                                        <span class="check-box"></span>
+                                        Âmbar <span class="color ambar"></span>
+                                    </label>
+                                </li>
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="todos" id="todos">
+                                    <label class="check-label" for="todos">
+                                        <span class="check-box"></span>
+                                        Transparente <span class="color transparente"></span>
+                                    </label>
+                                </li>
+                                <li class="check-item">
+                                    <input class="check-input" type="checkbox" name="todos" id="todos">
+                                    <label class="check-label" for="todos">
+                                        <span class="check-box"></span>
+                                        Verde <span class="color verde"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="section-header border-top">
+                    <h3 class="section-title">Capacidade</h3>
+                    <div class="icon-plus"></div>
+                </button>
+                <div class="section-drop">
+                    <div class="pb-3">
+                        <div class="range-track">
+                            <div class="range-number">
+                                <input id="min-range-cap" type="text" name="" value="50">
+                                <span class="suffix">ml</span>
+                            </div>
+                            <div class="range-icon">
+                                <img src="img/icons/swap-horizontal-outline.svg" width="17px" alt="range-icon">
+                            </div>
+                            <div class="range-number">
+                                <input id="max-range-cap" type="text" name="" value="3223">
+                                <span class="suffix">ml</span>
+                            </div>
+                        </div>
+                        <div class="middle capacidade">
+                            <div class="multi-range-slider">
+                                <input type="range" id="input-left-cap" min="0" max="100" value="0">
+                                <input type="range" id="input-right-cap" min="0" max="100" value="100">
+                        
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range"></div>
+                                    <div class="thumb left"></div>
+                                    <div class="thumb right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="section-header border-top">
+                    <h3 class="section-title">Altura</h3>
+                    <div class="icon-plus"></div>
+                </button>
+                <div class="section-drop">
+                    <div class="pb-3">
+                        <div class="range-track">
+                            <div class="range-number">
+                                <input id="min-range-alt" type="text" name="" value="64">
+                                <span class="suffix">ml</span>
+                            </div>
+                            <div class="range-icon">
+                                <img src="img/icons/swap-horizontal-outline.svg" width="17px" alt="range-icon">
+                            </div>
+                            <div class="range-number">
+                                <input id="max-range-alt" type="text" name="" value="337">
+                                <span class="suffix">ml</span>
+                            </div>
+                        </div>
+                        <div class="middle altura">
+                            <div class="multi-range-slider">
+                                <input type="range" id="input-left-alt" min="0" max="100" value="0">
+                                <input type="range" id="input-right-alt" min="0" max="100" value="100">
+                        
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range"></div>
+                                    <div class="thumb left"></div>
+                                    <div class="thumb right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="section-header border-top">
+                    <h3 class="section-title">Diâmetro</h3>
+                    <div class="icon-plus"></div>
+                </button>
+                <div class="section-drop">
+                    <div class="pb-3">
+                        <div class="range-track">
+                            <div class="range-number">
+                                <input id="min-range-dia" type="text" name="" value="40">
+                                <span class="suffix">mm</span>
+                            </div>
+                            <div class="range-icon">
+                                <img src="img/icons/swap-horizontal-outline.svg" width="17px" alt="range-icon">
+                            </div>
+                            <div class="range-number">
+                                <input id="max-range-dia" type="text" name="" value="149">
+                                <span class="suffix">mm</span>
+                            </div>
+                        </div>
+                        <div class="middle diametro">
+                            <div class="multi-range-slider">
+                                <input type="range" id="input-left-dia" min="0" max="100" value="0">
+                                <input type="range" id="input-right-dia" min="0" max="100" value="100">
+                        
+                                <div class="slider">
+                                    <div class="track"></div>
+                                    <div class="range"></div>
+                                    <div class="thumb left"></div>
+                                    <div class="thumb right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="section-header border-top">
+                    <h3 class="section-title">Terminar</h3>
+                    <div class="icon-plus"></div>
+                </button>
+                <div class="section-drop">
+                    <div class="pb-3">
+                        <select name="" id="">
+                            <option value="1">Todos</option>
+                            <option value="2">Rosca Contínua</option> 
+                            <option value="3">Rolha</option>  
+                            <option value="4">Crown</option>  
+                            <option value="5">Flip-Top</option>  
+                            <option value="5">Pilfer Proof</option>  
+                            <option value="5">Conta Gotas</option>  
+                            <option value="5">Twist-cown</option>  
+                            <option value="5">Twist-off</option>  
+                        </select>
+                    </div>
+                </div>
+
+                <button class="filter-header border-top">
+                    <h3 class="section-title">Carbonato</h3>
+                    <label class="label-slide">
+                        <input type="checkbox" name="" id="check-slide-input">
+                        <span class="slide-box"></span>
+                    </label>
+                </button>
+
+                <button class="filter-header border-top">
+                    <h3 class="section-title">Recarregável</h3>
+                    <label class="label-slide">
+                        <input type="checkbox" name="" id="check-slide-input">
+                        <span class="slide-box"></span>
+                    </label>
+                </button>
+            </div>
+            <div id="main-content" class="bg-light-grey">
+                <div class="row" style="margin-bottom: 30px;">
+                    <div class="col-md-6 col-sm-6">
+                        <a class="link-destaque" href="#">
+                            <div class="box-destaque" style="background-image: url('img/beer-cover.jpg')">
+                                <div class="text-destaque">
+                                    <h2 class="title-destaque">Cerveja</h2>
+                                    <p class="para-destaque">
+                                        Nossa criatividade inovadora e experiência técnica resultou em algumas das 
+                                        arrafas de cerveja mais inovadoras do mundo, fabricado em conjunto com nossos 
+                                        parceiros globais e artesões e microcervejarias semelhantes.
+                                    </p>
+                                    <button class="btn-destaque">
+                                        Ver gama de produtos
+                                        <img src="img/icons/arrow.svg" alt="icon arrow">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <a class="link-destaque" href="#">
+                            <div class="box-destaque" style="background-image: url('img/spirits-cover.jpg')">
+                                <div class="text-destaque">
+                                    <h2 class="title-destaque">Destilados</h2>
+                                    <p class="para-destaque">
+                                        O compromisso da O-I em criar garrafas de bebidas alcoólicas que celebrem a 
+                                        essência e singularidade da marca podem ser encontradas em quase todos os gêneros.
+                                        Nossas garrafas possuem uma quantidade infinita de opções de personalização, 
+                                        abrangendo o design, formatos, tamanhos e cores.
+                                    </p>
+                                    <button class="btn-destaque">
+                                        Ver gama de produtos
+                                        <img src="img/icons/arrow.svg" alt="icon arrow">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 30px;">
+                    <div class="col-md-6 col-sm-6">
+                        <a class="link-destaque" href="#">
+                            <div class="box-destaque" style="background-image: url('img/cover-cover.jpg')">
+                                <div class="text-destaque">
+                                    <h2 class="title-destaque">Covet</h2>
+                                    <p class="para-destaque">
+                                        Atraente. Diferente. Luxuoso.
+                                    </p>
+                                    <button class="btn-destaque">
+                                        Ver gama de produtos
+                                        <img src="img/icons/arrow.svg" alt="icon arrow">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <a class="link-destaque" href="#">
+                            <div class="box-destaque" style="background-image: url('img/wine-cover.jpg')">
+                                <div class="text-destaque">
+                                    <h2 class="title-destaque">Vinhos</h2>
+                                    <p class="para-destaque">
+                                        As garrafas de vidro O-I refletem a mesma paixão e detalhes artesanais dos vinhos
+                                        possuindo e oferecendo um espectro de possibilidades através de uma grande variedade
+                                        de formas, cores, impressão e opções de acabamento.
+                                    </p>
+                                    <button class="btn-destaque">
+                                        Ver gama de produtos
+                                        <img src="img/icons/arrow.svg" alt="icon arrow">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 30px;">
+                    <div class="col-md-6 col-sm-6">
+                        <a class="link-destaque" href="#">
+                            <div class="box-destaque" style="background-image: url('img/food-cover.jpg')">
+                                <div class="text-destaque">
+                                    <h2 class="title-destaque">Comida</h2>
+                                    <p class="para-destaque">
+                                        O alimento servido em embalagem de vidro é mais saboroso, aparentemente melhor
+                                        e com um aspecto melhor. Nossa embalagem de vidro para o setor alimentício combina
+                                        uma proteção segura e ideal com um design atraente, bonito; elementos-chave que
+                                        impulsionam as preferências e expectativas do consumidor.
+                                    </p>
+                                    <button class="btn-destaque">
+                                        Ver gama de produtos
+                                        <img src="img/icons/arrow.svg" alt="icon arrow">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <a class="link-destaque" href="#">
+                            <div class="box-destaque" style="background-image: url('img/NAB-cover.jpg')">
+                                <div class="text-destaque">
+                                    <h2 class="title-destaque">NAB</h2>
+                                    <p class="para-destaque">
+                                        Transparência e pureza incomparáveis. Nossas opções de embalagem cobrem uma vasta
+                                        variedade de formatos, tamanhos e cores que melhoram a imagem de qualquer produto de bebidas.
+                                        Seja ele um refrigerante, suco, leite, leite, café pronto para o consumo ou água engarrafada.
+                                    </p>
+                                    <button class="btn-destaque">
+                                        Ver gama de produtos
+                                        <img src="img/icons/arrow.svg" alt="icon arrow">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>

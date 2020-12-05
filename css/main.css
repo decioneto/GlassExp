@@ -447,3 +447,80 @@ a.clean-filter:hover {
 .box-produto a .add-cart:hover {
     background-color: var(--dark-grey);
 }
+
+/*CSS INDEX DESTAQUE*/
+
+.box-destaque {
+    min-height: 650px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: flex;
+}
+
+.box-destaque::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/gradient.png");
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.box-destaque .text-destaque {
+    margin-top: auto;
+    padding: 3em;
+    position: relative;
+    z-index: 3;
+}
+
+.box-destaque .text-destaque h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.box-destaque .text-destaque p {
+    color: #fff;
+    margin: 1em 0;
+}
+
+.btn-destaque {
+    border: 0;
+    background-color: var(--dark-grey);
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 3.5em;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.btn-destaque:hover {
+    background-color: #222;
+}
+
+.btn-destaque img {
+    position: absolute;
+    top: 50%;
+    left: 175px;
+    transform: translateY(-50%);
+    width: 15px;
+    margin-left: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-destaque:hover  img{
+    background-color: #222;
+    left: 180px;
+}
